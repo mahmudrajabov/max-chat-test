@@ -1,0 +1,24 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #182230; background: #eef3f8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { border: 0; cursor: pointer; font: inherit; }
+.app-shell { width: min(1100px, calc(100% - 32px)); margin: 40px auto; display: grid; grid-template-columns: 330px 1fr; gap: 20px; }
+.setup-card, .chat-card { background: #fff; border: 1px solid #dce5ee; border-radius: 20px; box-shadow: 0 12px 32px #29445c12; }
+.setup-card { padding: 24px; height: fit-content; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; color: #fff; border-radius: 12px; background: linear-gradient(135deg, #24bd77, #087eae); }
+.muted { color: #718096; line-height: 1.5; }
+.status { color: #129d6b; font-size: 12px; font-weight: 700; }
+label { display: block; margin: 26px 0 8px; font-size: 13px; font-weight: 700; }
+.phone-row { display: flex; gap: 8px; }
+input { width: 100%; border: 1px solid #d3dde7; border-radius: 11px; padding: 12px 13px; outline: none; }
+input:focus { border-color: #19a972; box-shadow: 0 0 0 3px #19a97220; }
+button { padding: 11px 14px; border-radius: 11px; color: #fff; background: #129d6b; white-space: nowrap; }
+.chat-card { min-height: 620px; display: flex; flex-direction: column; overflow: hidden; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid #e5ebf1; }
+h1 { margin: 0 0 5px; font-size: 18px; }
+.online-dot { color: #129d6b; font-size: 12px; }.api-label { color: #718096; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
+.messages { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #f8fafc; }
+.bubble { width: fit-content; max-width: 75%; padding: 11px 14px; border-radius: 15px; line-height: 1.4; background: #e4ebf2; }.bubble.me { margin-left: auto; color: #fff; background: #129d6b; border-bottom-right-radius: 4px; }.bubble.system { font-size: 13px; }.bubble.them { background: #dbeafe; }
+.composer { display: flex; gap: 10px; padding: 18px; border-top: 1px solid #e5ebf1; }
+@media (max-width: 760px) { .app-shell { grid-template-columns: 1fr; margin: 18px auto; }.chat-card { min-height: 560px; } }
